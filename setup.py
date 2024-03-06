@@ -15,7 +15,7 @@ for line in open(join("durhamspintronics", "__init__.py")):
 
 setuptools.setup(
     name="durhamspintronics",
-    version="0.0.4",
+    version=version,
     author="Ben Nicholson",
     author_email="ben.nicholson@durham.ac.uk",
     description="A collection of instrument control and analysis tools for the Spintronics group at Durham University.",

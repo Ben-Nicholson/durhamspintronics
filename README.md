@@ -31,6 +31,6 @@ Anaylsis methods, sorted by measurement type.
 ### General
 ```durhamspintronics.general``` 
 An unsorted, yet useful, set of functions.
-* ```get_symbols()``` prints a list of common symbols along which the respective chr() values.
+* ```get_symbols()``` Prints a list of common symbols along which the respective chr() values.
 * ```format_uncertainty(value, error)``` Returns a nicely formatted string in the form of "value ± error".
 * ```GenerateSampleDiagram``` A tool for quickly generating sample diagrams for presentations and reports.

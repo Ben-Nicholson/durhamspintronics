@@ -31,5 +31,7 @@ setuptools.setup(
             'nidaqmx',
             'pyserial',
             'time',
+            'opencv-python',
+            'pillow',
     ],
 )

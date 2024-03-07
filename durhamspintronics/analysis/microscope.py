@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from matplotlib_scalebar.scalebar import ScaleBar
 import cv2
 
+
 def add_scale_bar(filename, 
                   lens=None, 
                   border_pad=0.5, 
@@ -66,3 +67,25 @@ def add_scale_bar(filename,
         output_fname = image_path.split('.')[0]+'_WithScaleBar.png'
         plt.savefig(output_fname, dpi=150)
         plt.show()
+
+
+
+
+def reduce_saturation(filename, factor=0.5):
+	"""
+	Reduces the image saturation, which makes it easier to view on some projectors/screens.
+	"""
+	# Load image
+	img = cv2.imread(filename)
+	
+	# Convert from BGR to HSV
+	hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+	
+	# Reduce the saturation
+	hsv_img[:, :, 1] = np.clip(hsv_img[:, :, 1] * factor, 0, 255)
+	
+	# Convert back from HSV to BGR
+	output_img = cv2.cvtColor(hsv_img, cv2.COLOR_HSV2BGR)
+	
+	cv2.imwrite(image_path.split('.')[0]+'_Desaturated.png', output_img)
+	return output_img

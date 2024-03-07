@@ -30,7 +30,6 @@ setuptools.setup(
             'numpy',
             'nidaqmx',
             'pyserial',
-            'time',
             'opencv-python',
             'pillow',
     ],

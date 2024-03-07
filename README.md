@@ -12,6 +12,7 @@ Once installed, there are several differnt sub-modules.
 ```durhamspintronics.instruments``` contains a variety of class objects, each of which provides a user friendly wrapper for various instruments. The instruments are sorted by manufacturer. Currently included devices:
 * ```ni.NI_pci6713``` National Instruments analogue output device.
 * ```ni.NI_PCI6034E``` National Instruments analogue input device.
+* ```newport.ESP300``` Newport motion controller, model ESP300.
 
 ### Experiments
 ```durhamspintronic.experiments``` contins the class objects for the various experiements, such as the sotmoke. These classes combine the aforementioned instrument classes to create one object to control your experiment.

@@ -9,22 +9,27 @@ pip install durhamspintronics
 Once installed, there are several differnt sub-modules.
 
 ### Instruments
-```durhamspintronics.instruments``` contains a variety of class objects, each of which provides a user friendly wrapper for various instruments. The instruments are sorted by manufacturer. Currently included devices:
+```durhamspintronics.instruments``` 
+A variety of class objects, each of which provides a user friendly wrapper for various instruments. The instruments are sorted by manufacturer. Currently included devices:
 * ```ni.NI_pci6713``` National Instruments analogue output device.
 * ```ni.NI_PCI6034E``` National Instruments analogue input device.
 * ```newport.ESP300``` Newport motion controller, model ESP300.
 
 ### Experiments
-```durhamspintronic.experiments``` contins the class objects for the various experiements, such as the sotmoke. These classes combine the aforementioned instrument classes to create one object to control your experiment.
+```durhamspintronics.experiments``` 
+Class objects for the various experiements, such as the sotmoke. These classes combine the aforementioned instrument classes to create one object to control your experiment.
 * ```sotmoke``` Various experiment classes for running hysteresis loops which are field driven, current driven, or a combination of both.
 ### Data Loaders
-```durhamspintronics.dataloader``` contains class objects for loading the result files from various experiments.
+```durhamspintronics.dataloader``` 
+Class objects for loading the result files from various experiments.
 
 ### Anaylsis
-```durhamspintronics.analysis``` contains anaylsis methods, sorted by measurement type.
+```durhamspintronics.analysis``` 
+Anaylsis methods, sorted by measurement type.
 
 ### General
-```durhamspintronics.general``` contains an unsorted, yet useful, set of functions.
+```durhamspintronics.general``` 
+An unsorted, yet useful, set of functions.
 * ```get_symbols()``` prints a list of common symbols along which the respective chr() values.
 * ```format_uncertainty(value, error)``` Returns a nicely formatted string in the form of "value ± error".
 * ```GenerateSampleDiagram``` A tool for quickly generating sample diagrams for presentations and reports.

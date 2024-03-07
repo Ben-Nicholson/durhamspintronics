@@ -64,7 +64,7 @@ def add_scale_bar(filename,
             
         ax.add_artist(scalebar)
         plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-        output_fname = image_path.split('.')[0]+'_WithScaleBar.png'
+        output_fname = filename.split('.')[0]+'_WithScaleBar.png'
         plt.savefig(output_fname, dpi=150)
         plt.show()
 

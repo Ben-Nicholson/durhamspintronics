@@ -78,11 +78,12 @@ class GenerateSampleDiagram():
         self.layer_text = ['Silicon\nWafer', 'CoFeB(9nm)', 'Pt(3nm)', 'CoFeB(9nm)', 'Pt(3nm)']
         self.font_size = 24
         self.figsize = (4,7)
+        self.dpi = 100
 
 
     def generate_sample(self):
         # Create a '3D' figure in a 2D graph
-        self.fig = plt.figure(figsize=self.figsize, dpi=300)
+        self.fig = plt.figure(figsize=self.figsize, dpi=self.dpi)
         self.ax = self.fig.add_subplot(111)
         
         # Loop over each layer

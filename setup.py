@@ -28,5 +28,8 @@ setuptools.setup(
             'matplotlib',
             'scipy',
             'numpy',
+            'nidaqmx',
+            'pyserial',
+            'time',
     ],
 )

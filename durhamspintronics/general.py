@@ -10,8 +10,57 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 
+
+
+def get_symbols():
+    """"
+    Prints a list of commonly used symbols and which chr() value to use.
+    """
+    print('Greek letters:')
+    for n in range(945,970):
+        print(f'chr({n}) = {chr(n)}, chr({n-32}) = {chr(n-32)}')
+    print('Additional Symbols:')
+    print(r'\u212B = '+'\u212B')
+    return None
+
+
+
+
+def format_uncertainty(value, error):
+    """
+    Nicely format a value with its associated uncertainty, including rounding to 1 significant figure.
+
+    Args:
+        value (float): The value to format.
+        error (float): The uncertainty/error associated with the value.
+
+    Returns:
+        str: A formatted string in the form "value ± error", e.g. "8.67 ± 0.03".
+    """
+    # Special case when the error is zero
+    if error == 0:
+        return f'{round(value, 0)} ± 0'
+    
+    order_of_magnitude = int(math.floor(math.log10(abs(error))))
+    factor = 10 ** (-order_of_magnitude)
+    rounded_error = round(error * factor) / factor
+    precision = -order_of_magnitude 
+    formatted_value = round(value, precision)
+    
+    if rounded_error.is_integer():
+        # If the error is an integer, show no decimal places
+        rounded_error = int(rounded_error)
+        formatted_value = int(formatted_value)
+    
+    return f'{formatted_value} ± {rounded_error}'
+
+
+
+
 class GenerateSampleDiagram():
-    '''Generates a sample diagram showing the layer structure for posters, reports, presentations etc.'''
+    """
+    Generates a sample diagram showing the layer structure for posters, reports, presentations etc.
+    """
     def __init__(self):
         # Relative height for each layer
         self.layer_height = [3, 3, 1, 3, 1] 

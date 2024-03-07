@@ -27,6 +27,8 @@ Class objects for loading the result files from various experiments.
 ### Anaylsis
 ```durhamspintronics.analysis``` 
 Anaylsis methods, sorted by measurement type.
+* ```microscope.add_scale_bar``` Adds a calibrated scale bar to the images taken using the microscope in Ph58.
+* ```microscope.reduce_saturation``` Reduces the image saturation for easier viewing on some projectors/screens.
 
 ### General
 ```durhamspintronics.general``` 

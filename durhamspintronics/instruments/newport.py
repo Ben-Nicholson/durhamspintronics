@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 30 15:01:53 2023
+
+@author: Ben Nicholson
+"""
+
 class ESP300():
     def __init__(self, com_port, timeout=5):
         self.com_port = com_port

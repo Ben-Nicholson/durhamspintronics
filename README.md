@@ -16,7 +16,7 @@ Once installed, there are several differnt sub-modules.
 
 ### Experiments
 ```durhamspintronic.experiments``` contins the class objects for the various experiements, such as the sotmoke. These classes combine the aforementioned instrument classes to create one object to control your experiment.
-
+* ```sotmoke``` Various experiment classes for running hysteresis loops which are field driven, current driven, or a combination of both.
 ### Data Loaders
 ```durhamspintronics.dataloader``` contains class objects for loading the result files from various experiments.
 

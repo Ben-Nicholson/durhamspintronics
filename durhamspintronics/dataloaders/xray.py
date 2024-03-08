@@ -12,6 +12,8 @@ import xml.etree.ElementTree as ET
 import numpy as np
 
 
+
+
 class load_brml():
     def __init__(self, filename, savetxt=False):
         """

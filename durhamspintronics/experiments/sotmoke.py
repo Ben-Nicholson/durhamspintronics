@@ -310,7 +310,8 @@ class BaseExperiment:
         print(self.input_device._channel_list)
      
         
-     
+
+
 class FieldExperiment(BaseExperiment):
     CALIBRATED_X_AXIS_TITLE = r'Magnetic Field (mT)' # Strictly speaking, it should be... r'$\mu_0$H (mT)'
     RAW_X_AXIS_TITLE = 'Hall Voltage (V)'
@@ -361,6 +362,7 @@ class FieldExperiment(BaseExperiment):
         super().run(nloops, rebin=rebin, normalise=normalise, plot=plot, 
                     file_name=file_name, comment=comment)  
      
+
 
 
 class CurrentExperiment(BaseExperiment):
@@ -454,6 +456,7 @@ class CurrentExperimentWithField(CurrentExperiment):
       
     
 
+
 class FieldExperimentWithCurrent(FieldExperiment):
     '''Fix current, sweep field'''
 
@@ -508,9 +511,7 @@ class FieldExperimentWithCurrent(FieldExperiment):
     def current_amplitude(self, amplitude):
         if not self.output_device.set_amplitude('current', amplitude): print('No channel named "magnet". Amplitude not set.')
     
-        
-     
-        
+
 def plot_result(filelist, x_label=f'${chr(956)}_0$H (mT)', y_label='Kerr Signal'):
     if not isinstance(filelist, list):
         print('Argument type must be a list, even if you only give one file name.')
@@ -527,6 +528,8 @@ def plot_result(filelist, x_label=f'${chr(956)}_0$H (mT)', y_label='Kerr Signal'
         plt.ylabel(y_label)
         plt.show()
         
+
+
 
 # To remind users to update their scripts to version 2.0...
 class Experiment():

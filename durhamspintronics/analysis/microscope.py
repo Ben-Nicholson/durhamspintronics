@@ -12,6 +12,8 @@ from matplotlib_scalebar.scalebar import ScaleBar
 import cv2
 
 
+
+
 def add_scale_bar(filename, 
                   lens=None, 
                   border_pad=0.5, 

@@ -27,9 +27,13 @@ Class objects for loading the result files from various experiments.
 ### Anaylsis
 ```durhamspintronics.analysis``` 
 Anaylsis methods, sorted by measurement type.
-* ```microscope.add_scale_bar``` Adds a calibrated scale bar to the images taken using the microscope in Ph58.
-* ```microscope.reduce_saturation``` Reduces the image saturation for easier viewing on some projectors/screens.
-
+* ```microscope.add_scale_bar()``` Adds a calibrated scale bar to the images taken using the microscope in Ph58.
+* ```microscope.reduce_saturation()``` Reduces the image saturation for easier viewing on some projectors/screens.
+* ```moke.langevin_singlesweep()``` Modified langevin function for modelling half-hysteresis loops.
+* ```moke.langevin_dualshape_singlesweep()``` Extends ```langevin_singlesweep()``` to include two shape parameters for half-hysteresis loops which are antisymmetric immediately about the coercive field.
+* ```moke.langevin_dualshape()``` Converts ```langevin_dualshape_singlesweep()``` into complete hysteresis loops.
+* ```moke.fit_langevin_dualshape()``` Performs a basic ```lmfit``` for a given hysteresis loop.
+  
 ### General
 ```durhamspintronics.general``` 
 An unsorted, yet useful, set of functions.

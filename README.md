@@ -12,7 +12,7 @@ Once installed, there are several differnt sub-modules.
 ```durhamspintronics.instruments``` 
 A variety of class objects, each of which provides a user friendly wrapper for various instruments. The instruments are sorted by manufacturer. Currently included devices:
 * ```ni.NI_pci6713``` National Instruments analogue output device.
-* ```ni.NI_PCI6034E``` National Instruments analogue input device.
+* ```ni.NI_pci6034E``` National Instruments analogue input device.
 * ```newport.ESP300``` Newport motion controller, model ESP300.
 
 ### Experiments

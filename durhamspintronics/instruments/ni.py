@@ -10,6 +10,9 @@ import numpy as np
 import serial
 from time import time, sleep
 
+
+
+
 class NI_pci6713:
     '''PCI Analogue output device.'''
     

@@ -11,14 +11,18 @@ Once installed, there are several differnt sub-modules.
 ### Instruments
 ```durhamspintronics.instruments``` 
 A variety of class objects, each of which provides a user friendly wrapper for various instruments. The instruments are sorted by manufacturer. Currently included devices:
+* ```kepco.BOP``` Kepco BOP power supply (commonly the magnet power supply).
+* ```newport.ESP300``` Newport motion controller, model ESP300.
 * ```ni.NI_pci6713``` National Instruments analogue output device.
 * ```ni.NI_pci6034E``` National Instruments analogue input device.
-* ```newport.ESP300``` Newport motion controller, model ESP300.
+* ```rohdeandschwarz.ZNLE18_VNA``` Rohde & Schwarz 18 GHz Vector Network Analyser.
 
 ### Experiments
 ```durhamspintronics.experiments``` 
 Class objects for the various experiements, such as the sotmoke. These classes combine the aforementioned instrument classes to create one object to control your experiment.
+* ```fmr_vna``` Example script for running a frequency sweep measurement on the FMR setup in Ph50.
 * ```sotmoke``` Various experiment classes for running hysteresis loops which are field driven, current driven, or a combination of both.
+
 ### Data Loaders
 ```durhamspintronics.dataloader``` 
 Class objects for loading the result files from various experiments.

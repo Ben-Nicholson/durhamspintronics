@@ -14,7 +14,7 @@ import numpy as np
 
 
 
-class load_brml():
+class Load_brml():
     def __init__(self, filename, savetxt=False):
         """
         For use with Bruker D8 .brml files.

@@ -22,7 +22,8 @@ Class objects for the various experiements, such as the sotmoke. These classes c
 ### Data Loaders
 ```durhamspintronics.dataloader``` 
 Class objects for loading the result files from various experiments.
-* ```xray.load_brml``` For use with Bruker D8 .brml files.
+* ```xray.Load_brml``` For use with Bruker D8 .brml files.
+* ```deposition.Load_MantisLog``` For use with Mantis Deposition sputtering log files.
 
 ### Anaylsis
 ```durhamspintronics.analysis``` 

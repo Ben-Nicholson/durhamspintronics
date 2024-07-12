@@ -65,16 +65,19 @@ class Load_brml():
         for chain in root.findall("./DataRoutes/DataRoute/Datum"):
             intensity.append(int(chain.text.split(',')[-1]))
 
+        # Find count time
+        for chain in root.findall("./DataRoutes/DataRoute/SubScans/SubScanInfo"):
+            self.count_time = float(chain.get("MeasuredTimePerStep")) # [seconds]
+            
         if savetxt == True:
             np.savetxt(os.path.join(os.path.dirname(self.filename), os.path.splitext(os.path.basename(self.filename))[0] + r'.txt'), 
                        np.column_stack((scanning_motors["TwoTheta"], intensity)))
-        
-        #print(os.path.splitext(os.path.basename(file_name))[0])
         
         # Remove extracted files
         os.system('RMDIR "'+ extract_path +'" /s /q')
         
         # Set useful variables, needs expanding to include rocking curves etc
+        self.cps = intensity/self.count_time
         self.counts = intensity
         self.twotheta = scanning_motors["TwoTheta"]
 
